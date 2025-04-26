@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rida Fatima | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto Slab', serif;
+      background-color: #e8f5e9; /* Light green background */
+      color: #2e7d32; /* Dark green text */
+    }
+    a {
+      color: #388e3c; /* Green color for links */
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1, h2, h3 {
+      color: #1b5e20; /* Darker green for headings */
+    }
+
+    /* Navigation */
+    nav {
+      background: #66bb6a; /* Green background for nav */
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1b5e20; /* Dark green for logo */
+    }
+    .navbar {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .navbar a {
+      font-weight: 600;
+      font-size: 1rem;
+      color: #2e7d32; /* Green color for navbar links */
+      transition: color 0.3s ease;
+    }
+    .navbar a:hover {
+      color: #1b5e20; /* Darker green on hover */
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Merriweather', serif;
+      font-size: 4rem;
+      color: #1b5e20; /* Dark green for header title */
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    }
+    header h2 {
+      font-size: 1.5rem;
+      color: #388e3c; /* Green subtitle */
+      margin-top: 10px;
+    }
+    .btn {
+      margin-top: 20px;
+      padding: 12px 30px;
+      background: #388e3c; /* Green button */
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    .btn:hover {
+      background: #1b5e20; /* Darker green on hover */
+      transform: scale(1.05);
+    }
+    section {
+      padding: 80px 10%;
+    }
+    h3 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: 'Merriweather', serif;
+      color: #1b5e20; /* Dark green for section titles */
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #33691e; /* Lighter green for paragraph text */
+    }
+    .projects, .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .card {
+      background: #c8e6c9; /* Light green card background */
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      transition: 0.3s ease;
+    }
+    .card:hover {
+      background: #a5d6a7; /* Slightly darker green on hover */
+      transform: translateY(-10px);
+    }
+    .card h4 {
+      margin-bottom: 15px;
+      color: #1b5e20; /* Dark green for card titles */
+      font-size: 1.5rem;
+    }
+    .contact {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .contact p {
+      margin: 10px 0;
+      color: #388e3c; /* Green contact text */
+    }
+    footer {
+      background: #66bb6a; /* Green footer background */
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #1b5e20; /* Dark green for footer text */
+    }
+    .btn-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Rida Fatima</div>
+      <ul class="navbar">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Rida Fatima</h1>
+    <h2>Web Developer & Designer</h2>
+    <div class="btn-container">
+      <a href="#projects"><button class="btn">View My Work</button></a>
+    </div>
+  </header>
+
+  <section id="about">
+    <h3>About Me</h3>
+    <p>Hi! I'm Rida Fatima, a passionate web developer with expertise in Laravel, Vue.js, and modern frontend frameworks. I love creating dynamic, secure, and user-friendly web applications that deliver a seamless user experience.</p>
+  </section>
+
+  <section id="projects">
+    <h3>Projects</h3>
+    <div class="projects">
+      <div class="card">
+        <h4>Instant Shop (Web App)</h4>
+        <p>Designed a real-time e-commerce platform using Laravel API backend and Vue.js frontend, integrated with live cart updates through Pusher and Laravel Echo.</p>
+      </div>
+      <div class="card">
+        <h4>Y Picker (Chrome Extension)</h4>
+        <p>Developed a Chrome extension that tracks YouTube user activity, triggers Laravel API endpoints, and dynamically stores user interaction data into the database for analytics.</p>
+      </div>
+      <div class="card">
+        <h4>CV Templates (Web App)</h4>
+        <p>Developed professional CV templates and converted it into dynamic Laravel-based templates.</p>
+      </div>
+      <div class="card">
+        <h4>Product Importer (Chrome Extension)</h4>
+        <p>Created a Chrome extension that scrapes product data from different e-commerce websites, imports it, and displays it in a managed product dashboard.</p>
+      </div>
+      <div class="card">
+        <h4>Ecomm Front</h4>
+        <p>Developed a fully responsive, modern e-commerce frontend using Vue.js and Tailwind CSS focused on UX/UI design and real-time responsiveness.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h3>Skills</h3>
+    <div class="skills">
+      <div class="card">HTML & CSS</div>
+      <div class="card">JavaScript & Vue.js</div>
+      <div class="card">Laravel & PHP</div>
+      <div class="card">API Integrations</div>
+      <div class="card">MySQL & Database Management</div>
+      <div class="card">Bootstrap / Tailwind CSS</div>
+      <div class="card">Git & GitHub</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h3>Contact</h3>
+    <div class="contact">
+      <p>Email: ridaf6364@gmail.com</p>
+      <p>Phone: 03147877826</p>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Rida Fatima. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
