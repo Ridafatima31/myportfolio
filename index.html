@@ -3,194 +3,957 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rida Fatima | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+
+  <title>Rida Fatima | Full Stack Web Developer</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    body {
-      font-family: 'Roboto Slab', serif;
-      background-color: #e8f5e9; /* Light green background */
-      color: #2e7d32; /* Dark green text */
-    }
-   
-    h1, h2, h3 {
-      color: #1b5e20; /* Darker green for headings */
+
+    html {
+      scroll-behavior: smooth;
     }
 
-    /* Navigation */
-  
-    
-    
-    
+    body {
+      font-family: 'Roboto Slab', serif;
+      background-color: #e8f5e9;
+      color: #2e7d32;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4 {
+      color: #1b5e20;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(232, 245, 233, 0.95);
+      backdrop-filter: blur(8px);
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .logo {
+      font-family: 'Merriweather', serif;
+      font-size: 1.4rem;
+      color: #1b5e20;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #2e7d32;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #1b5e20;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
     header {
-      height: 100vh;
+      min-height: 100vh;
+      padding: 120px 10% 80px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
     }
+
+    .hero-tag {
+      color: #388e3c;
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
     header h1 {
       font-family: 'Merriweather', serif;
       font-size: 4rem;
-      color: #1b5e20; /* Dark green for header title */
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+      color: #1b5e20;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
     }
+
     header h2 {
-      font-size: 1.5rem;
-      color: #388e3c; /* Green subtitle */
-      margin-top: 10px;
+      font-size: 1.6rem;
+      color: #388e3c;
+      margin-top: 15px;
     }
-    .btn {
+
+    .hero-description {
+      max-width: 750px;
       margin-top: 20px;
+      font-size: 1.1rem;
+      color: #33691e;
+    }
+
+    .btn-container {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .btn {
       padding: 12px 30px;
-      background: #388e3c; /* Green button */
+      background: #388e3c;
       color: #fff;
       border: none;
       border-radius: 30px;
       font-weight: 600;
       cursor: pointer;
       transition: 0.3s ease;
+      display: inline-block;
     }
+
     .btn:hover {
-      background: #1b5e20; /* Darker green on hover */
-      transform: scale(1.05);
+      background: #1b5e20;
+      transform: translateY(-3px);
     }
+
+    .btn-outline {
+      background: transparent;
+      color: #388e3c;
+      border: 2px solid #388e3c;
+    }
+
+    .btn-outline:hover {
+      color: #fff;
+      background: #388e3c;
+    }
+
+    /* =========================
+       SECTIONS
+    ========================= */
+
     section {
-      padding: 80px 10%;
+      padding: 90px 10%;
     }
+
     h3 {
       font-size: 2.5rem;
       margin-bottom: 20px;
       text-align: center;
       font-family: 'Merriweather', serif;
-      color: #1b5e20; /* Dark green for section titles */
+      color: #1b5e20;
     }
-    p {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      color: #33691e; /* Lighter green for paragraph text */
-    }
-    .projects, .skills {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-    .card {
-      background: #c8e6c9; /* Light green card background */
-      padding: 25px;
-      border-radius: 12px;
+
+    .section-description {
+      max-width: 850px;
+      margin: 0 auto;
       text-align: center;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      color: #33691e;
+      font-size: 1.05rem;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-content {
+      max-width: 900px;
+      margin: 35px auto 0;
+      text-align: center;
+    }
+
+    .about-content p {
+      font-size: 1.15rem;
+      line-height: 1.9;
+      color: #33691e;
+    }
+
+    /* =========================
+       EXPERIENCE
+    ========================= */
+
+    .experience-container {
+      max-width: 900px;
+      margin: 45px auto 0;
+    }
+
+    .experience-card {
+      background: #c8e6c9;
+      padding: 30px;
+      border-radius: 15px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
       transition: 0.3s ease;
     }
-    .card:hover {
-      background: #a5d6a7; /* Slightly darker green on hover */
-      transform: translateY(-10px);
+
+    .experience-card:hover {
+      transform: translateY(-5px);
+      background: #a5d6a7;
     }
-    .card h4 {
-      margin-bottom: 15px;
-      color: #1b5e20; /* Dark green for card titles */
+
+    .experience-card h4 {
       font-size: 1.5rem;
+      margin-bottom: 5px;
     }
+
+    .experience-date {
+      color: #388e3c;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .experience-card ul {
+      padding-left: 20px;
+      color: #33691e;
+    }
+
+    .experience-card li {
+      margin-bottom: 10px;
+    }
+
+    /* =========================
+       PROJECTS
+    ========================= */
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 45px;
+    }
+
+    .card {
+      background: #c8e6c9;
+      padding: 28px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      background: #a5d6a7;
+      transform: translateY(-8px);
+    }
+
+    .card h4 {
+      margin-bottom: 10px;
+      color: #1b5e20;
+      font-size: 1.4rem;
+    }
+
+    .tech {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 5px 12px;
+      border-radius: 20px;
+      background: #388e3c;
+      color: #fff;
+      font-size: 0.8rem;
+    }
+
+    .card p {
+      font-size: 0.98rem;
+      color: #33691e;
+    }
+
+    /* =========================
+       SKILLS
+    ========================= */
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 45px;
+    }
+
+    .skill-card {
+      background: #c8e6c9;
+      padding: 22px;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 600;
+      color: #1b5e20;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+      transition: 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      background: #a5d6a7;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
     .contact {
       text-align: center;
-      margin-top: 30px;
+      margin-top: 35px;
     }
+
     .contact p {
-      margin: 10px 0;
-      color: #388e3c; /* Green contact text */
+      margin: 12px 0;
+      color: #33691e;
+      font-size: 1.05rem;
     }
+
+    .contact a {
+      color: #388e3c;
+      font-weight: 600;
+    }
+
+    .contact a:hover {
+      color: #1b5e20;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
     footer {
-      background: #66bb6a; /* Green footer background */
+      background: #66bb6a;
       text-align: center;
       padding: 20px;
+      color: #1b5e20;
+    }
+
+    footer p {
+      color: #1b5e20;
       font-size: 0.9rem;
-      color: #1b5e20; /* Dark green for footer text */
     }
-    .btn-container {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 768px) {
+
+      nav {
+        padding: 15px 5%;
+      }
+
+      .nav-links {
+        gap: 12px;
+        font-size: 0.85rem;
+      }
+
+      header {
+        padding: 110px 6% 60px;
+      }
+
+      header h1 {
+        font-size: 2.7rem;
+      }
+
+      header h2 {
+        font-size: 1.2rem;
+      }
+
+      section {
+        padding: 70px 6%;
+      }
+
+      h3 {
+        font-size: 2rem;
+      }
     }
-    a {
-      text-decoration: none;
-      color: inherit;
+
+    @media (max-width: 500px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      header h1 {
+        font-size: 2.3rem;
+      }
+
+      .hero-description {
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
+
 <body>
 
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
+  <nav>
+    <div class="logo">Rida Fatima</div>
+
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
 
   <header>
-    <h1>Rida Fatima</h1>
-    <h2>Web Developer & Designer</h2>
-    <div class="btn-container">
-      <a href="#projects"><button class="btn">View My Work</button></a>
+
+    <div class="hero-tag">
+      Full Stack Web Developer
     </div>
+
+    <h1>Rida Fatima</h1>
+
+    <h2>Laravel | Vue.js | Nuxt.js</h2>
+
+    <p class="hero-description">
+      Full Stack Web Developer with hands-on experience building
+      scalable web applications using Laravel, Vue.js, and Nuxt.js.
+      I build clean, maintainable, database-driven applications
+      with a strong focus on usability, performance, and code quality.
+    </p>
+
+    <div class="btn-container">
+      <a href="#projects" class="btn">
+        View My Work
+      </a>
+
+      <a href="#contact" class="btn btn-outline">
+        Contact Me
+      </a>
+    </div>
+
   </header>
 
+
+  <!-- =========================
+       ABOUT
+  ========================= -->
+
   <section id="about">
+
     <h3>About Me</h3>
-    <p>Hi! I'm Rida Fatima, a passionate web developer with expertise in Laravel, Vue.js, and modern frontend frameworks. I love creating dynamic, secure, and user-friendly web applications that deliver a seamless user experience.</p>
+
+    <div class="about-content">
+
+      <p>
+        I'm Rida Fatima, a Full Stack Web Developer specializing in
+        Laravel, Vue.js, and Nuxt.js. I have experience developing
+        scalable web applications, secure APIs, responsive frontend
+        interfaces, database-driven features, and business-focused
+        solutions.
+      </p>
+
+      <br>
+
+      <p>
+        My experience includes e-commerce, real estate, property
+        management, dashboards, API integrations, authentication,
+        payment integrations, and dynamic Laravel applications.
+      </p>
+
+    </div>
+
   </section>
 
-  <section id="projects">
-    <h3>Projects</h3>
-    <div class="projects">
-      <div class="card">
-        <h4>Instant Shop (Web App)</h4>
-        <p>Designed a real-time e-commerce platform using Laravel API backend and Vue.js frontend, integrated with live cart updates through Pusher and Laravel Echo.</p>
+
+  <!-- =========================
+       EXPERIENCE
+  ========================= -->
+
+  <section id="experience">
+
+    <h3>Work Experience</h3>
+
+    <p class="section-description">
+      Professional experience developing production-ready web
+      applications across backend and frontend technologies.
+    </p>
+
+    <div class="experience-container">
+
+      <!-- Skynet -->
+
+      <div class="experience-card">
+
+        <h4>Skynet Solutionz</h4>
+
+        <div class="experience-date">
+          June 2025 – Present
+        </div>
+
+        <ul>
+          <li>
+            Develop and integrate secure APIs for Laravel and Nuxt.js
+            applications.
+          </li>
+
+          <li>
+            Collaborate with frontend teams to build responsive,
+            user-friendly web experiences.
+          </li>
+
+          <li>
+            Contribute to real estate applications with property
+            management, listing workflows, and database-driven
+            functionality.
+          </li>
+
+          <li>
+            Build production features with a strong focus on
+            scalability, usability, performance, and code quality.
+          </li>
+
+          <li>
+            Help maintain clean architecture and optimized application
+            performance.
+          </li>
+        </ul>
+
       </div>
-      <div class="card">
-        <h4>Y Picker (Chrome Extension)</h4>
-        <p>Developed a Chrome extension that tracks YouTube user activity, triggers Laravel API endpoints, and dynamically stores user interaction data into the database for analytics.</p>
+
+
+      <!-- Intelliage -->
+
+      <div class="experience-card">
+
+        <h4>Intelliage Solutions</h4>
+
+        <div class="experience-date">
+          January 2024 – June 2025
+        </div>
+
+        <ul>
+
+          <li>
+            Developed real-time e-commerce features including
+            live cart updates and API-driven functionality.
+          </li>
+
+          <li>
+            Built Chrome extensions that interacted with Laravel APIs,
+            tracked user activity, and stored processed data in databases.
+          </li>
+
+          <li>
+            Designed and implemented dynamic CV templates using
+            Laravel and database-driven content.
+          </li>
+
+          <li>
+            Built modern and responsive e-commerce frontends using
+            Vue.js and Tailwind CSS.
+          </li>
+
+          <li>
+            Integrated third-party data sources and automated product
+            imports.
+          </li>
+
+          <li>
+            Developed dashboards for managing imported and scraped data.
+          </li>
+
+        </ul>
+
       </div>
-      <div class="card">
-        <h4>CV Templates (Web App)</h4>
-        <p>Developed professional CV templates and converted it into dynamic Laravel-based templates.</p>
-      </div>
-      <div class="card">
-        <h4>Product Importer (Chrome Extension)</h4>
-        <p>Created a Chrome extension that scrapes product data from different e-commerce websites, imports it, and displays it in a managed product dashboard.</p>
-      </div>
-      <div class="card">
-        <h4>Ecomm Front</h4>
-        <p>Developed a fully responsive, modern e-commerce frontend using Vue.js and Tailwind CSS focused on UX/UI design and real-time responsiveness.</p>
-      </div>
+
     </div>
+
   </section>
+
+
+  <!-- =========================
+       PROJECTS
+  ========================= -->
+
+<section id="projects">
+
+  <h3>Projects</h3>
+
+  <p class="section-description">
+    Selected production projects built using Laravel, Vue.js, and Nuxt.js.
+  </p>
+
+  <div class="projects">
+
+    <!-- Opul Properties -->
+    <div class="card">
+
+      <h4>Opul Properties</h4>
+
+      <p>
+        A real estate platform featuring property listings,
+        buying and renting workflows, project listings,
+        property management, and database-driven functionality.
+      </p>
+
+      <span class="tech">
+        Laravel + Nuxt.js
+      </span>
+
+      <div style="margin-top: 20px;">
+        <a
+          href="https://demo.opulproperties.ae/"
+          target="_blank"
+          class="btn"
+        >
+          View Live Website
+        </a>
+      </div>
+
+    </div>
+
+
+    <!-- iStudy -->
+    <div class="card">
+
+      <h4>iStudy</h4>
+
+      <p>
+        An international education platform providing study-abroad
+        information, university programs, scholarships, and
+        student-focused services.
+      </p>
+
+      <span class="tech">
+        Laravel
+      </span>
+
+      <div style="margin-top: 20px;">
+        <a
+          href="https://istudypk.com/"
+          target="_blank"
+          class="btn"
+        >
+          View Live Website
+        </a>
+      </div>
+
+    </div>
+
+
+    <!-- Teak & Rugs -->
+    <div class="card">
+
+      <h4>Teak & Rugs</h4>
+
+      <p>
+        A modern e-commerce and business website built with
+        Laravel, featuring product-focused functionality and
+        responsive user experience.
+      </p>
+
+      <span class="tech">
+        Laravel
+      </span>
+
+      <div style="margin-top: 20px;">
+        <a
+          href="https://teakandrugs.theitxperts.com/"
+          target="_blank"
+          class="btn"
+        >
+          View Live Website
+        </a>
+      </div>
+
+    </div>
+
+
+    <!-- HajjFinders -->
+    <div class="card">
+
+      <h4>HajjFinders</h4>
+
+      <p>
+        A full-stack web platform developed with Laravel and
+        Nuxt.js, combining backend APIs with a modern frontend
+        experience.
+      </p>
+
+      <span class="tech">
+        Laravel + Nuxt.js
+      </span>
+
+      <div style="margin-top: 20px;">
+        <a
+          href="https://www.hajjfinders.com/"
+          target="_blank"
+          class="btn"
+        >
+          View Live Website
+        </a>
+      </div>
+
+    </div>
+
+
+    <!-- Aazea -->
+    <div class="card">
+
+      <h4>Aazea</h4>
+
+      <p>
+        A Laravel-based web application with database-driven
+        business functionality and a responsive user interface.
+      </p>
+
+      <span class="tech">
+        Laravel
+      </span>
+
+      <div style="margin-top: 20px;">
+        <a
+          href="https://staging.aazeahouse.com/"
+          target="_blank"
+          class="btn"
+        >
+          View Live Website
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+  <!-- =========================
+       SKILLS
+  ========================= -->
 
   <section id="skills">
-    <h3>Skills</h3>
+
+    <h3>Technical Skills</h3>
+
     <div class="skills">
-      <div class="card">HTML & CSS</div>
-      <div class="card">JavaScript & Vue.js</div>
-      <div class="card">Laravel & PHP</div>
-      <div class="card">API Integrations</div>
-      <div class="card">MySQL & Database Management</div>
-      <div class="card">Bootstrap / Tailwind CSS</div>
-      <div class="card">Git & GitHub</div>
+
+      <div class="skill-card">
+        PHP
+      </div>
+
+      <div class="skill-card">
+        Laravel
+      </div>
+
+      <div class="skill-card">
+        REST APIs
+      </div>
+
+      <div class="skill-card">
+        Third-Party APIs
+      </div>
+
+      <div class="skill-card">
+        Vue.js
+      </div>
+
+      <div class="skill-card">
+        Nuxt.js
+      </div>
+
+      <div class="skill-card">
+        TypeScript
+      </div>
+
+      <div class="skill-card">
+        JavaScript
+      </div>
+
+      <div class="skill-card">
+        HTML5 & CSS3
+      </div>
+
+      <div class="skill-card">
+        Bootstrap
+      </div>
+
+      <div class="skill-card">
+        Tailwind CSS
+      </div>
+
+      <div class="skill-card">
+        MySQL
+      </div>
+
+      <div class="skill-card">
+        Database Relationships
+      </div>
+
+      <div class="skill-card">
+        Token-Based Authentication
+      </div>
+
+      <div class="skill-card">
+        Laravel Passport
+      </div>
+
+      <div class="skill-card">
+        Social Authentication
+      </div>
+
+      <div class="skill-card">
+        Queue Jobs
+      </div>
+
+      <div class="skill-card">
+        Console Commands
+      </div>
+
+      <div class="skill-card">
+        PDF Generation
+      </div>
+
+      <div class="skill-card">
+        Import & Export
+      </div>
+
+      <div class="skill-card">
+        Stripe Payment Gateway
+      </div>
+
+      <div class="skill-card">
+        Git & GitHub
+      </div>
+
     </div>
+
   </section>
+
+
+  <!-- =========================
+       EDUCATION
+  ========================= -->
+
+  <section id="education">
+
+    <h3>Education</h3>
+
+    <div class="experience-container">
+
+      <div class="experience-card">
+
+        <h4>Virtual University</h4>
+
+        <div class="experience-date">
+          Bachelor of Data Sciences
+        </div>
+
+      </div>
+
+
+      <div class="experience-card">
+
+        <h4>Intelliage Trainings</h4>
+
+        <div class="experience-date">
+          2023 – 2024
+        </div>
+
+        <p>
+          Diploma in Software Technology
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CONTACT
+  ========================= -->
 
   <section id="contact">
-    <h3>Contact</h3>
+
+    <h3>Let's Connect</h3>
+
+    <p class="section-description">
+      Interested in working together or have a project in mind?
+      Feel free to get in touch.
+    </p>
+
     <div class="contact">
-      <p>Email: ridaf6364@gmail.com</p>
-      <p>Phone: 03147877826</p>
+
+      <p>
+        Email:
+        <a href="mailto:ridaf6364@gmail.com">
+          ridaf6364@gmail.com
+        </a>
+      </p>
+
+      <p>
+        Phone:
+        <a href="tel:+923147877826">
+          +92 314 7877826
+        </a>
+      </p>
+
+      <p>
+        Location:
+        Lahore, Pakistan
+      </p>
+
+      <p>
+        LinkedIn:
+        <a
+          href="https://www.linkedin.com/in/rida-fatima-298520364/"
+          target="_blank"
+        >
+          linkedin.com/in/rida-fatima-298520364
+        </a>
+      </p>
 
     </div>
+
   </section>
 
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
   <footer>
-    <p>&copy; 2025 Rida Fatima. All Rights Reserved.</p>
+
+    <p>
+      &copy; 2026 Rida Fatima. All Rights Reserved.
+    </p>
+
   </footer>
+
+
 </body>
 </html>
